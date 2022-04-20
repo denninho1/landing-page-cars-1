@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,800&display=swap');
 /* 
 ------- RESTES --------
 */
@@ -8,7 +9,7 @@
   text-decoration: none;
   border: none;
   list-style: none;
-  font-family: monospace;
+  font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -22,18 +23,18 @@ body {
   height: 500vh;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .container {
   max-width: 1280px;
   width: 90%;
   margin: 0 auto;
 }
 
-#logo {
-  color: #fff;
-  font-size: 3rem;
-  font-weight: 900;
-  text-transform: uppercase;
-}
 
 #btn_buy {
   position: relative;
@@ -45,14 +46,13 @@ body {
   box-shadow: inset 0 0 5px rgba(255, 255, 255, .5),
               0 0 5px rgba(255, 255, 255, .5);
   border: .1rem solid #fff;
-  width: 25rem;
-  padding: 2rem 0;
+  padding: 1.5rem 2rem;
   text-align: center;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: .2rem;
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 1.6rem;
   transition: all 300ms linear;
 }
 
@@ -67,7 +67,7 @@ body {
   transform: translateX(-5rem);
   opacity: 0;
   transition: 300ms;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 #btn_buy:hover::after {
@@ -98,7 +98,7 @@ body {
 }
 
 .header.sticky {
-  background-color: #000;
+  background-color: rgba(0,0,0,0.9);
 }
 
 .header .container {
@@ -110,6 +110,22 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 100%;
+}
+
+
+.header .header_container .logo {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: 1px;
+}
+
+.header .header_container .logo .img {
+  width: 5rem;
+  height: 2.5rem;
 }
 
 .header .header_container .header_navbar {
@@ -147,10 +163,10 @@ body {
 
 .header .header_container .header_navbar .navs #nav_link #text {
   color: #fff;
-  font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: .2rem;
   font-weight: 600;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -174,7 +190,7 @@ body {
   background-color: transparent;
   color: #fff;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 /* 
@@ -187,14 +203,14 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
 .new_car .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 80vh;
+  height: 100vh;
   padding: 10rem 0;
 }
 
@@ -205,7 +221,8 @@ body {
 }
 
 .new_car .details_car h1 {
-  font-size: 3.5rem;
+  font-size: 2.8rem;
+  font-family: monospace;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: .3rem;
@@ -217,8 +234,7 @@ body {
   color: #f3f3f3;
   display: block;
   line-height: 2;
-  font-size: 2.2rem;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 .new_car .details_car span #check {
@@ -234,41 +250,42 @@ body {
   justify-content: center;
   list-style: center;
   color: #fff;
-  font-size: 2rem;
   background: transparent;
   box-shadow: inset 0 0 5px rgba(255, 255, 255, .5),
               0 0 5px rgba(255, 255, 255, .5);
   border: .1rem solid #fff;
   transition: all 300ms;
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
-  overflow: hidden;
 }
 
 .new_car .btns #local::after {
-  content: 'Concessionárias';
+  content: '';
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%) ;
-  right: -10rem;
-  opacity: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
   transition: all 200ms;
-  font-size: 2rem;
-  opacity: 0;
-  font-weight: 600;
-}
-
-.new_car .btns #local:hover {
-  border-radius: 1rem;
-  padding: 0 1rem;
-  width: 21rem;
-  justify-content: flex-start;
 }
 
 .new_car .btns #local:hover::after {
-  opacity: 1;
-  right: 1rem;
+  box-shadow: 0 5px 5px 0 rgba(255, 255, 255, .2),
+              5px 0 5px 0 rgba(255, 255, 255, .2),
+              5px 5px 5px 0 rgba(255, 255, 255, .2);
+  animation: anime-shadow 2s linear infinite;
+}
+
+
+
+@keyframes anime-shadow {
+  0% {
+    transform: rotate(360deg);
+  }
+
+
 }
 
 
