@@ -20,7 +20,6 @@ html {
 body {
   overflow-x: hidden;
   font-size: 1.6rem;
-  height: 500vh;
 }
 
 img {
@@ -31,12 +30,12 @@ img {
 
 .container {
   max-width: 1280px;
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
 }
 
 
-#btn_buy {
+.btn_primary {
   position: relative;
   display: flex;
   align-items: center;
@@ -56,13 +55,13 @@ img {
   transition: all 300ms linear;
 }
 
-#btn_buy span {
+.btn_primary span {
   display: flex;
   align-items: center;
   transition: all 300ms linear;
 }
 
-#btn_buy::after {
+.btn_primary::after {
   content: '>';
   transform: translateX(-5rem);
   opacity: 0;
@@ -70,12 +69,12 @@ img {
   font-size: 1.6rem;
 }
 
-#btn_buy:hover::after {
+.btn_primary:hover::after {
   opacity: 1;
   transform: translateX(.5rem);
 }
 
-#btn_buy:hover span {
+.btn_primary:hover span {
   transform: translateX(-.5rem);
 }
 
@@ -83,6 +82,7 @@ img {
 /* 
 --------- HEADER --------
 */
+
 .header {
   position: fixed;
   top: 0;
@@ -111,7 +111,6 @@ img {
   justify-content: space-between;
   height: 100%;
 }
-
 
 .header .header_container .logo {
   color: #fff;
@@ -198,20 +197,24 @@ img {
 */
 
 .banner {
-  background: linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,0.2)),
+  background: radial-gradient(circle at center, rgba(0,0,0,0.2) 50%, rgba(0,0,0,.7) 100%),
   url(../imgs/main_car.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .new_car .container {
+  height: 100%;
+}
+
+.new_car .new_car_container {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
-  padding: 10rem 0;
+  padding: 7rem 0;
 }
 
 .new_car .container .btns {
@@ -220,29 +223,71 @@ img {
   justify-content: space-between;
 }
 
-.new_car .details_car h1 {
-  font-size: 2.8rem;
+.new_car .new_car_container .title {
+  font-size: 4rem;
   font-family: monospace;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: .3rem;
-  line-height: 4rem;
-  margin-bottom: 2rem;
 }
 
-.new_car .details_car span {
-  color: #f3f3f3;
-  display: block;
-  line-height: 2;
-  letter-spacing: 2px;
+.new_car .new_car_container .details_car {
+  height: 27rem;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
 }
 
-.new_car .details_car span #check {
-  color: rgb(2, 175, 2);
-  font-size: 1.8rem;
+
+.new_car .new_car_container .details_car:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -15px;
+  height: 100%;
+  width: .1rem;
+  background-color: #ccc;
 }
 
-.new_car .btns #local {
+.new_car .new_car_container .details_car .info {
+  transition: all 200ms linear;
+  color: #ccc;
+  position: relative;
+  cursor: default;
+  width: max-content;
+}
+
+.new_car .new_car_container .details_car .info::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -20px;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: all 200ms linear;
+}
+
+.new_car .new_car_container .details_car .info span {
+    display: block;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.new_car .new_car_container .details_car .info:hover {
+  padding-left: .5rem;
+  color: #fff;
+}
+
+.new_car .new_car_container .details_car .info:hover::before {
+  background-color: #fff;
+}
+
+.new_car .btns .local {
   position: relative;
   text-align: center;
   display: flex;
@@ -260,7 +305,7 @@ img {
   border-radius: 50%;
 }
 
-.new_car .btns #local::after {
+.new_car .btns .local::after {
   content: '';
   position: absolute;
   top: 0;
@@ -271,23 +316,27 @@ img {
   transition: all 200ms;
 }
 
-.new_car .btns #local:hover::after {
+.new_car .btns .local:hover::after {
   box-shadow: 0 5px 5px 0 rgba(255, 255, 255, .2),
               5px 0 5px 0 rgba(255, 255, 255, .2),
               5px 5px 5px 0 rgba(255, 255, 255, .2);
   animation: anime-shadow 2s linear infinite;
 }
 
-
+/* 
+---------- ANIMATIONS -------------
+*/
 
 @keyframes anime-shadow {
   0% {
     transform: rotate(360deg);
   }
-
-
 }
 
+
+/* 
+----------- MEDIAS -------------
+*/
 
 @media (max-width: 991px) {
   html {

@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./imgs/sportive-car.png" type="image/x-icon">
-    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Car - Landing Page</title>
+    <title>Automotive - Landing Page</title>
   </head>
   <body>
+    <!-------------- HEADER --------------->
     <header class="header">
       <div class="container">
         <div class="header_container">
@@ -49,29 +50,42 @@
         </div>
       </div>
     </header>
-
+    <!----------- HOME/NEW CAR ------------>
     <main class="new_car banner">
       <div class="container">
-        <div class="details_car">
-          <h1>Novo Audi 2022 SPORT</h1>
-          <span><i class="fas fa-check" id="check"></i> Automático</span>
-          <span><i class="fas fa-check" id="check"></i> Esportivo</span>
-          <span><i class="fas fa-check" id="check"></i> 400 Cavalos</span>
-        </div>
-  
-        <div class="btns">
-          <a href="#" id="btn_buy">
-            <span>Comprar agora</span>
-          </a>
+        <div class="new_car_container">
+          <h1 class="title" >Audi Sport</h1>
 
-          <a href="#" title="Localização" id="local">
-            <span><i class="fas fa-map-marker-alt"></i></span>
-          </a>
+          <div class="details_car">
+            <div class="info" title="Aceleração em 4.2 segundos">
+              <span><i class="fas fa-clock"></i> 4.2s</span>
+              <span>Aceleração</span>
+            </div>
+
+            <div class="info" title="Potência de 400 cavalos" >
+              <span><i class="fas fa-tachometer-alt"></i> 400cv</span>
+              <span>Potência</span>
+            </div>
+
+            <div class="info" title="Velocidade de até 200km/h">
+              <span><i class="fas fa-car"></i> 240km/h</span>
+              <span>Velocidade máxima</span>
+            </div>
+          </div>
+          
+          <div class="btns">
+            <a href="#" class="btn_primary">
+              <span>FAZER PROPOSTA</span>
+            </a>
+            
+            <a href="#" title="Concessionárias" class="local">
+              <span><i class="fas fa-map-marker-alt"></i></span>
+            </a>
+          </div>
         </div>
       </div>
     </main>
 
     <script src="./script/script.js"></script>
-    <script src="./script/all.js"></script>
   </body>
 </html>
