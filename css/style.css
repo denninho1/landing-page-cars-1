@@ -31,10 +31,9 @@ img {
 
 .container {
   max-width: 1280px;
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
 }
-
 
 .btn_primary {
   position: relative;
@@ -78,7 +77,6 @@ img {
 .btn_primary:hover span {
   transform: translateX(-.5rem);
 }
-
 
 /* 
 --------- HEADER --------
@@ -233,6 +231,15 @@ img {
   position: relative;
   width: max-content;
 }
+.new_car .new_car_container .title span {
+  background-image: linear-gradient(to left, rgb(185, 16, 190) 20%, steelblue, rgb(64, 213, 224));
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+}
 
 .new_car .new_car_container .title::before {
   content: '';
@@ -262,7 +269,6 @@ img {
   justify-content: space-between;
   position: relative;
 }
-
 
 .new_car .new_car_container .details_car:before {
   content: '';
@@ -356,7 +362,6 @@ img {
   }
 }
 
-
 /* 
 ----------- MEDIAS -------------
 */
@@ -380,12 +385,11 @@ img {
     gap: 2rem;
   }
 
- 
-.new_car .btns #local:hover {
-  border-radius: 50%;
-  padding: 0 1rem;
-  width: 5rem;
-  justify-content: center;
+  .new_car .btns #local:hover {
+    border-radius: 50%;
+    padding: 0 1rem;
+    width: 5rem;
+    justify-content: center;
   }
 
   .new_car .btns #local::after {
